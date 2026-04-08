@@ -1,0 +1,33 @@
+#include <windows.h>
+#include "resource.h"
+
+IDI_LOGIFADEFIX  ICON  "LogiFadeFix.ico"
+
+IDR_BLANKWAVE    WAVE  "blank.wav"
+
+IDR_TRAYMENU MENU
+{
+    POPUP ""
+    {
+        MENUITEM "&About", IDM_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit", IDM_EXIT
+    }
+}
+
+#include <ntverp.h>
+#define VER_FILETYPE                    VFT_APP
+#define VER_FILESUBTYPE                 VFT_UNKNOWN
+#undef  VER_COMPANYNAME_STR
+#define VER_COMPANYNAME_STR             "aubymori"
+#undef  VER_PRODUCTNAME_STR
+#define VER_PRODUCTNAME_STR             "LogiFadeFix"
+#define VER_FILEDESCRIPTION_STR         "LogiFadeFix"
+#define VER_INTERNALNAME_STR            "LogiFadeFix"
+#define VER_LEGALCOPYRIGHT_YEARS        "2026"
+#define VER_ORIGINALFILENAME_STR        "LogiFadeFix.exe"
+#undef  VER_PRODUCTVERSION
+#define VER_PRODUCTVERSION              VER_MAJOR,VER_MINOR,VER_REVISION,0
+#undef  VER_PRODUCTVERSION_STR
+#define VER_PRODUCTVERSION_STR          VER_STRING
+#include <common.ver>
